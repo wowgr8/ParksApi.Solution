@@ -29,7 +29,7 @@ namespace Parks
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<CretaceousParkContext>(opt =>
+            services.AddDbContext<StateAndNatParkContext>(opt =>
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
             services.AddControllers();
 
