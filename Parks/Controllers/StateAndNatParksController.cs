@@ -77,6 +77,21 @@ namespace Parks.Controllers
       return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteStateAndNatPark(int id)
+    {
+      var stateAndNatPark = await _db.StateAndNatParks.FindAsync(id);
+      if (stateAndNatPark == null)
+      {
+        return NotFound();
+      }
+
+      _db.StateAndNatParks.Remove(stateAndNatPark);
+      await _db.SaveChangesAsync();
+
+      return NoContent();
+    }
+
     private bool StateAndNatParkExists(int id)
     {
       return _db.StateAndNatParks.Any(e=> e.StateAndNatParkId == id);
