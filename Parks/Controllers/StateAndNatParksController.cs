@@ -25,5 +25,14 @@ namespace Parks.Controllers
     {
       return await _db.Animals.ToListAsync();
     }
+
+    [HttpPost]
+    public async Task<ActionResult<StateAndNatPark>> Post(StateAndNatPark stateAndNatPark)
+    {
+      _db.StateAndNatParks.Add(StateAndNatPark);
+      await _db.SaveChangesAsync();
+
+      return CreatedAtAction("Post", new { id = stateAndNatPark.StateAndNatParkId }, stateAndNatPark);
+    }
   }
 }
