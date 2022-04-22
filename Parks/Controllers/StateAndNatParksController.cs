@@ -32,7 +32,7 @@ namespace Parks.Controllers
       _db.StateAndNatParks.Add(stateAndNatPark);
       await _db.SaveChangesAsync();
 
-      return CreatedAtAction("Post", new { id = stateAndNatPark.StateAndNatParkId }, stateAndNatPark);
+      return CreatedAtAction(nameof(GetStateAndNatPark), new { id = stateAndNatPark.StateAndNatParkId }, stateAndNatPark);
     }
 
     [HttpGet("{id}")]
