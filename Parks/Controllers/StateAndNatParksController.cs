@@ -47,5 +47,39 @@ namespace Parks.Controllers
 
       return stateAndNatPark;
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(int id, StateAndNatPark stateAndNatPark)
+    {
+      if (id != stateAndNatPark.StateAndNatParkId)
+      {
+        return BadRequest();
+      }
+      
+      _db.Entry(stateAndNatPark).State = EntityState.Modified;
+
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!StateAndNatParkExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+
+      return NoContent();
+    }
+
+    private bool StateAndNatParkExists(int id)
+    {
+      return _db.StateAndNatParks.Any(e=> e.StateAndNatParkId == id);
+    }
   }
 }
