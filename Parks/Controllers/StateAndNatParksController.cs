@@ -21,9 +21,26 @@ namespace Parks.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<StateAndNatPark>>> Get()
+    public async Task<ActionResult<IEnumerable<StateAndNatPark>>> Get(string name, string type, string locationbystate)
     {
-      return await _db.StateAndNatParks.ToListAsync();
+      var query = _db.StateAndNatParks.AsQueryable();
+
+      if (name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+
+      if (type != null)
+      {
+        query = query.Where(entry => entry.Type == type);
+      }
+
+      if (locationbystate != null)
+      {
+        query = query.Where(entry => entry.LocationByState == locationbystate);
+      }
+
+      return await query.ToListAsync();
     }
 
     [HttpPost]
