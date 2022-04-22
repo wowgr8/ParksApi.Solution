@@ -34,5 +34,18 @@ namespace Parks.Controllers
 
       return CreatedAtAction("Post", new { id = stateAndNatPark.StateAndNatParkId }, stateAndNatPark);
     }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<StateAndNatPark>> GetStateAndNatPark(int id)
+    {
+      var stateAndNatPark = await _db.StateAndNatParks.FindAsync(id);
+
+      if (stateAndNatPark == null)
+      {
+        return NotFound();
+      }
+
+      return stateAndNatPark;
+    }
   }
 }
