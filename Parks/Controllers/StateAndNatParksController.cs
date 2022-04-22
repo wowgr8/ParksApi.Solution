@@ -23,13 +23,13 @@ namespace Parks.Controllers
     [HttpGet]
     public async Task<ActionResult<IEnumerable<StateAndNatPark>>> Get()
     {
-      return await _db.Animals.ToListAsync();
+      return await _db.StateAndNatParks.ToListAsync();
     }
 
     [HttpPost]
     public async Task<ActionResult<StateAndNatPark>> Post(StateAndNatPark stateAndNatPark)
     {
-      _db.StateAndNatParks.Add(StateAndNatPark);
+      _db.StateAndNatParks.Add(stateAndNatPark);
       await _db.SaveChangesAsync();
 
       return CreatedAtAction("Post", new { id = stateAndNatPark.StateAndNatParkId }, stateAndNatPark);
