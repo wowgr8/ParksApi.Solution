@@ -50,7 +50,6 @@ namespace Parks
             }
 
             // app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
