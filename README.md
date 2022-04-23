@@ -6,8 +6,7 @@
 
 #### _An ASP.NET Core web API for U.S. State and National Parks._
 
-*** insert image here ***
-[]()
+![](https://github.com/wowgr8/gifsV2/blob/main/parks-api/parks_api-swagger.jpg)
 
 ## Table of Contents
 
@@ -96,7 +95,7 @@ Here is an example of available user queries:
 ```
 https://localhost:5001/api/StateAndNatParks
 ```
-* Listing/Editing/Deleting an park by id:
+* Listing/Editing/Deleting a park by id:
 
 ```
 https://localhost:5001/api/StateAndNatParks/4
