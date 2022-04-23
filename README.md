@@ -88,7 +88,7 @@ The API enpoints are the following:
 - DELETE /api/StateAndNatParks/{id} (delete a specific park by id)
 ```
 
-Here is an example of available user queries:
+Here are examples of available user queries:
 
 * A full list of all the parks: <details><summary>click for image</summary>![](https://github.com/wowgr8/gifsV2/blob/main/parks-api/parks_api-full.jpg) </details>
 ```
