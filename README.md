@@ -90,21 +90,25 @@ The API enpoints are the following:
 
 Here is an example of available user queries:
 
-* A full list of all the parks:
-
+* A full list of all the parks: <details><summary>click for image</summary>![](https://github.com/wowgr8/gifsV2/blob/main/parks-api/parks_api-full.jpg) </details>
 ```
 https://localhost:5001/api/StateAndNatParks
 ```
-* Listing/Editing/Deleting a park by id:
+<br />&nbsp;<br />
+
+* Listing/Editing/Deleting a park by id:<details><summary>click for image</summary>![]() </details>
 
 ```
 https://localhost:5001/api/StateAndNatParks/4
 ```
-* Searching by parameter
+<br />&nbsp;<br />
+
+* Searching by parameter: <details><summary>click for image</summary>![]() </details>
 
 ```
 https://localhost:5001/api/StateAndNatParks?type=State%20Park
 ```
+<br />&nbsp;<br />
 
 ## Known Bugs <a id="bugs"></a>
 
