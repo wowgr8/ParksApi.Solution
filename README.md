@@ -131,4 +131,4 @@ If you encounter any issues or have any questions or ideas for this site, please
 Cesar Lopez:
 * Email: [Lopez.cesar.aug@gmail.com](mailto:lopez.cesar.aug@gmail.com)
 * Github: [wowgr8](https://github.com/wowgr8)
-* LinkedIn: [Cesar Lopez](https://www.linkedin.com/in/cesar-aug-lopez)
+* LinkedIn: [https://www.linkedin.com/in/cesar-aug-lopez](https://www.linkedin.com/in/cesar-aug-lopez)
