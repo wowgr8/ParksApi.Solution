@@ -25,7 +25,7 @@
 * ASP.Net Core
 * ASP.NET MVC
 * Dotnet ef
-* MySql
+* Sql
 * MySql Workbench
 * Visual Studio Code
 * Entity Framework Core
